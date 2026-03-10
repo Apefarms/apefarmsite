@@ -18,11 +18,11 @@ export default function Contact() {
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-black/5 bg-white p-5">
                 <div className="text-sm font-semibold text-neutral-900">WhatsApp</div>
-                <div className="mt-2 text-sm text-neutral-600">+91 90000 00000</div>
+                <div className="mt-2 text-sm text-neutral-600">+91 99400 61057</div>
               </div>
               <div className="rounded-2xl border border-black/5 bg-white p-5">
                 <div className="text-sm font-semibold text-neutral-900">Email</div>
-                <div className="mt-2 text-sm text-neutral-600">hello@apemango.com</div>
+                <div className="mt-2 text-sm text-neutral-600">apefarmsakm@gmail.com</div>
               </div>
               <div className="rounded-2xl border border-black/5 bg-white p-5 sm:col-span-2">
                 <div className="text-sm font-semibold text-neutral-900">Hours</div>

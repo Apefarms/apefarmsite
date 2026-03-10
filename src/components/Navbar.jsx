@@ -8,9 +8,9 @@ export default function Navbar() {
   const links = useMemo(
     () => [
       { id: 'home', label: 'Home' },
-      { id: 'about', label: 'About' },
+      { id: 'our-story', label: 'Our Story' },
       { id: 'gallery', label: 'Gallery' },
-      { id: 'order', label: 'Order' },
+      { id: 'prices', label: 'Prices' },
       { id: 'contact', label: 'Contact' },
     ],
     [],
@@ -47,15 +47,17 @@ export default function Navbar() {
           type="button"
           onClick={() => scrollToSection('home')}
           className="group inline-flex items-center gap-2"
-          aria-label="Go to top"
+          aria-label="APE FARMS - Go to top"
         >
           <img
-            src="/img/logo.png"   // put your image inside public folder
-            alt="Logo"
+            src="/img/logo.webp"
+            alt="APE FARMS Arambakkam Mangoes Logo"
             className="h-12 w-12 rounded-full object-cover shadow-sm"
+            width="48"
+            height="48"
           />
           <span className="text-sm font-semibold tracking-wide text-neutral-900">
-            APE Farms
+            APE FARMS
             <span className="ml-2 align-middle text-[10px] font-medium text-mango-700/90">
               Premium
             </span>
@@ -82,7 +84,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          onClick={() => scrollToSection('order')}
+          onClick={() => scrollToSection('preorder')}
           className={
             'rounded-full px-4 py-2 text-sm font-semibold shadow-sm transition ' +
             (scrolled
@@ -90,7 +92,7 @@ export default function Navbar() {
               : 'bg-white/15 text-white ring-1 ring-white/20 hover:bg-white/20')
           }
         >
-          Shop now
+          Pre-order now
         </button>
       </div>
     </header>

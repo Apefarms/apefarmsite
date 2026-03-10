@@ -1,10 +1,10 @@
 const IMAGES = [
-  { src: '/img/gallery1.jpeg', alt: 'Golden mangoes on a branch' },
-  { src: '/img/gallery2.jpeg', alt: 'Fresh premium mangoes' },
-  { src: '/img/gallery3.jpeg', alt: 'Mango orchard harvest' },
-  { src: '/img/gallery4.jpeg', alt: 'Juicy mango slices' },
-  { src: '/img/gallery5.jpeg', alt: 'Gift-ready mango box' },
-  { src: '/img/gallery6.jpeg', alt: 'Seasonal mango selection' },
+  { src: '/img/gallery1.webp', alt: 'Arambakkam Banganapalli Mango Box - APE FARMS Chennai Delivery' },
+  { src: '/img/gallery2.webp', alt: 'Arambakkam Imam Pasand Mango Selection - APE FARMS Chennai Delivery' },
+  { src: '/img/gallery3.webp', alt: 'Arambakkam Mango Orchard Harvest - APE FARMS Chennai Delivery' },
+  { src: '/img/gallery4.webp', alt: 'Arambakkam Alphonso Mango Slices - APE FARMS Chennai Delivery' },
+  { src: '/img/gallery5.webp', alt: 'Arambakkam Banganapalli Mango Gift Box - APE FARMS Chennai Delivery' },
+  { src: '/img/gallery6.webp', alt: 'Arambakkam Seasonal Mango Collection - APE FARMS Chennai Delivery' },
 ]
 
 export default function Gallery() {
@@ -17,10 +17,11 @@ export default function Gallery() {
               Gallery
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
-              A peek at the season’s finest.
+              A peek at the season's finest from Arambakkam.
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600">
-              Warm tones, clean skins, and that unmistakable aroma. Hover to explore.
+              Sun-ripened Banganapalli, Imam Pasand &amp; Alphonso mangoes — golden skins, rich aroma,
+              and that unmistakable sweetness. Hover to explore.
             </p>
           </div>
 
@@ -40,6 +41,8 @@ export default function Gallery() {
                 alt={img.alt}
                 className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
                 loading="lazy"
+                width="400"
+                height="256"
               />
               <div
                 className="pointer-events-none absolute inset-0 z-10"

@@ -2,20 +2,23 @@ const BOXES = [
   {
     name: '3kg Box',
     note: 'Perfect for tasting and gifting.',
-    price: '₹999',
+    price: '₹499',
     tag: 'Starter',
+    sku: 'APE-3KG',
   },
   {
     name: '5kg Box',
     note: 'Family-friendly, best value balance.',
-    price: '₹1,599',
+    price: '₹799',
     tag: 'Popular',
+    sku: 'APE-5KG',
   },
   {
     name: '10kg Box',
     note: 'Bulk order for events and offices.',
-    price: '₹2,999',
+    price: '₹1,499',
     tag: 'Bulk',
+    sku: 'APE-10KG',
   },
 ]
 
@@ -23,7 +26,7 @@ const WHATSAPP_NUMBER = '919940061057'
 
 export default function Order() {
   const openWhatsApp = (boxName) => {
-    const text = `Hi, I want to pre-order the ${boxName} mango box.`
+    const text = `Hi, I'd like to pre-order the ${boxName} of fresh Arambakkam mangoes for Chennai delivery.`
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
     window.open(url, '_blank', 'noopener,noreferrer')
   }
@@ -40,15 +43,16 @@ export default function Order() {
               Choose your mango box.
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600">
-              Select a box size, tap order, and we’ll handle ripeness scheduling and secure packaging.
+              Select a box size, tap order, and we'll handle ripeness scheduling, secure packaging,
+              and fresh delivery across Chennai.
             </p>
           </div>
           <div className="rounded-2xl bg-mango-50 px-5 py-4 text-sm text-neutral-700 ring-1 ring-black/5">
-            Free delivery above <span className="font-semibold">₹999</span>
+            Free delivery above <span className="font-semibold">₹499</span>
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div id="prices" className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {BOXES.map((v) => (
             <div
               key={v.name}
@@ -82,8 +86,10 @@ export default function Order() {
                     type="button"
                     onClick={() => openWhatsApp(v.name)}
                     className="rounded-2xl bg-neutral-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
+                    data-tracking={`whatsapp-order-${v.sku}`}
+                    aria-label={`Order Fresh Mangoes - ${v.name}`}
                   >
-                    Order now
+                    🥭 Order Fresh Mangoes
                   </button>
                   <button
                     type="button"
@@ -101,18 +107,18 @@ export default function Order() {
           ))}
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-3xl border border-black/5 bg-neutral-50 p-8 shadow-sm">
+        <div id="preorder" className="mt-12 overflow-hidden rounded-3xl border border-black/5 bg-neutral-50 p-8 shadow-sm">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-mango-700">
                 Pre-order
               </div>
               <div className="mt-3 text-2xl font-semibold tracking-tight text-neutral-900">
-                Reserve your box on WhatsApp.
+                Reserve your Arambakkam mango box on WhatsApp.
               </div>
               <div className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600">
-                Click below to place a pre-order. We’ll confirm availability, delivery date, and
-                ripeness schedule.
+                Click below to place a pre-order for fresh Banganapalli, Imam Pasand, or Alphonso mangoes.
+                We'll confirm availability, delivery date, and ripeness schedule for your Chennai address.
               </div>
             </div>
 
@@ -120,8 +126,10 @@ export default function Order() {
               type="button"
               onClick={() => openWhatsApp('Pre-order')}
               className="h-12 rounded-2xl bg-mango-600 px-6 text-sm font-semibold text-white shadow-lg shadow-mango-900/20 transition hover:bg-mango-700"
+              data-tracking="whatsapp-preorder-cta"
+              aria-label="Pre-order Fresh Arambakkam Mangoes on WhatsApp"
             >
-              Pre-order on WhatsApp
+              🥭 Order Fresh Mangoes
             </button>
           </div>
         </div>
