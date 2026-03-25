@@ -5,6 +5,7 @@ const BOXES = [
     price: '₹499',
     tag: 'Starter',
     sku: 'APE-3KG',
+    img: '/img/499_mango.png',
   },
   {
     name: '5kg Box',
@@ -12,6 +13,7 @@ const BOXES = [
     price: '₹799',
     tag: 'Popular',
     sku: 'APE-5KG',
+    img: '/img/799_mango.png',
   },
   {
     name: '10kg Box',
@@ -19,6 +21,7 @@ const BOXES = [
     price: '₹1,499',
     tag: 'Bulk',
     sku: 'APE-10KG',
+    img: '/img/1499_mango.png',
   },
 ]
 
@@ -56,12 +59,18 @@ export default function Order() {
           {BOXES.map((v) => (
             <div
               key={v.name}
-              className="relative overflow-hidden rounded-3xl border border-black/5 bg-neutral-50 p-7 shadow-sm"
+              className="relative flex flex-col overflow-hidden rounded-3xl border border-black/5 bg-neutral-50 shadow-sm"
             >
-              <div className="absolute -right-24 -top-24 h-48 w-48 rounded-full bg-mango-300/30 blur-3xl" />
-              <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-mango-700/15 blur-3xl" />
+              <div className="absolute -right-24 -top-24 h-48 w-48 rounded-full bg-mango-300/30 blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-mango-700/15 blur-3xl pointer-events-none" />
 
-              <div className="relative">
+              {v.img && (
+                <div className="relative w-full shrink-0">
+                  <img src={v.img} alt={v.name} className="aspect-square w-full object-cover" />
+                </div>
+              )}
+
+              <div className="relative flex flex-col flex-1 p-7">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="text-lg font-semibold text-neutral-900">{v.name}</div>

@@ -30,14 +30,14 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/img/mangohero.webp')",
+          backgroundImage: "url('/img/ape_hero.png')",
           backgroundPosition: `center ${bgOffset}px`,
         }}
         role="img"
         aria-label="Arambakkam Banganapalli Mango Orchard - APE FARMS Chennai Delivery"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/60" />
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/60" /> */}
 
       <div className="relative mx-auto flex h-full max-w-6xl items-center px-4">
         <div className="max-w-2xl">
