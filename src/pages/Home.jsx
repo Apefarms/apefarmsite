@@ -5,6 +5,7 @@ import Gallery from '../components/Gallery.jsx'
 import Order from '../components/Order.jsx'
 import Contact from '../components/Contact.jsx'
 import Footer from '../components/Footer.jsx'
+import WhatsApp from '../components/whatsapp.jsx'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <WhatsApp />
     </div>
   )
 }

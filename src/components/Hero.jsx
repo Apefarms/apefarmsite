@@ -89,11 +89,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-6 flex justify-center">
-        <div className="h-10 w-6 rounded-full border border-white/30 bg-white/5">
-          <div className="mx-auto mt-2 h-2 w-1 rounded-full bg-white/70" />
-        </div>
-      </div>
     </section>
   )
 }
