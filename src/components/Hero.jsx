@@ -30,7 +30,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/img/ape_hero.png')",
+          backgroundImage: "url('/img/ape_hero.webp')",
           backgroundPosition: `center ${bgOffset}px`,
         }}
         role="img"

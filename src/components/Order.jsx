@@ -5,7 +5,7 @@ const BOXES = [
     price: '₹499',
     tag: 'Starter',
     sku: 'APE-3KG',
-    img: '/img/499_mango.png',
+    img: '/img/499_mango.webp',
   },
   {
     name: '5kg Box',
@@ -13,7 +13,7 @@ const BOXES = [
     price: '₹799',
     tag: 'Popular',
     sku: 'APE-5KG',
-    img: '/img/799_mango.png',
+    img: '/img/799_mango.webp',
   },
   {
     name: '10kg Box',
@@ -21,7 +21,7 @@ const BOXES = [
     price: '₹1,499',
     tag: 'Bulk',
     sku: 'APE-10KG',
-    img: '/img/1499_mango.png',
+    img: '/img/1499_mango.webp',
   },
 ]
 
