@@ -13,7 +13,7 @@ export default function Register({ isOpen, onClose, onLoginSuccess }) {
   const [loading, setLoading] = useState(false)
 
   if (!isOpen) return null
-
+  const API_BASE = 'http://44.222.172.166:5000'
   const handleSubmit = async (e) => {
     e.preventDefault()
     setMessage('')
@@ -32,7 +32,8 @@ export default function Register({ isOpen, onClose, onLoginSuccess }) {
     setLoading(true)
 
     try {
-      const res = await fetch('http://localhost:5000/auth', {
+      // Change this line to target /auth exactly
+      const res = await fetch('https://api.apefarms.in/auth', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
