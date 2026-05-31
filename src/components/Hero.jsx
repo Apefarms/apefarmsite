@@ -56,7 +56,7 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#preorder"
+              href="#order"
               className="inline-flex items-center justify-center rounded-full bg-mango-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-mango-900/30 transition hover:bg-mango-700 focus:outline-none focus:ring-2 focus:ring-white/60"
               data-tracking="hero-order-cta"
             >
@@ -64,7 +64,7 @@ export default function Hero() {
             </a>
             <a
               href="#gallery"
-              className="inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/60"
+              className="inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/60 hidden"
             >
               View gallery
             </a>

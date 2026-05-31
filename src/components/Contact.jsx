@@ -26,7 +26,7 @@ export default function Contact() {
               </div>
               <div className="rounded-2xl border border-black/5 bg-white p-5 sm:col-span-2">
                 <div className="text-sm font-semibold text-neutral-900">Hours</div>
-                <div className="mt-2 text-sm text-neutral-600">Mon–Sat, 9:00 AM – 7:00 PM</div>
+                <div className="mt-2 text-sm text-neutral-600">Sun-Sat, 9:00 AM – 7:00 PM</div>
               </div>
             </div>
           </div>
@@ -84,9 +84,7 @@ export default function Contact() {
                 Send message
               </button>
 
-              <p className="text-xs text-neutral-500">
-                By submitting, you agree to be contacted about your order.
-              </p>
+
             </form>
           </div>
         </div>

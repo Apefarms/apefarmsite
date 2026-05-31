@@ -9,8 +9,8 @@ const IMAGES = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="scroll-mt-24 bg-neutral-50 py-20">
-      <div className="mx-auto max-w-6xl px-4">
+    <section id="gallery" className="scroll-mt-24 bg-neutral-50 py-20 hidden">
+      <div className="mx-auto max-w-6xl px-4 ">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mango-700">
