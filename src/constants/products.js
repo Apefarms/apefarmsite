@@ -2,7 +2,7 @@ export const PRODUCTS = [
   {
     id: 1,
     name: 'Banganapalli',
-    price: '₹150/kg',
+    price: '₹120/kg',
     desc: 'Sweet & juicy, the king of mangoes.',
     color: 'bg-[#ffc63f]',
     img: '/img/Bangunaballi.png',
@@ -10,7 +10,7 @@ export const PRODUCTS = [
   {
     id: 2,
     name: 'Javari',
-    price: '₹150/kg',
+    price: '₹110/kg',
     desc: 'Sun warmed with a ripened sweet mangoes.',
     color: 'bg-[#5b8723]',
     img: '/img/javari.png',
@@ -18,7 +18,7 @@ export const PRODUCTS = [
   {
     id: 3,
     name: 'Alphonsa',
-    price: '₹150/kg',
+    price: '₹130/kg',
     desc: 'Known for its rich flavor and aroma.',
     color: 'bg-[#fb980e]',
     img: '/img/alphonso.png',
@@ -34,7 +34,7 @@ export const PRODUCTS = [
   {
     id: 5,
     name: 'Sendura',
-    price: '₹200/kg',
+    price: '₹90/kg',
     desc: 'Known for its beautiful red hue and size.',
     color: 'bg-[#f45d2e]',
     img: '/img/sendhura.png',
