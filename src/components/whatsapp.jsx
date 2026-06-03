@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function WhatsApp() {
-  const whatsappNumber = '919940061057'
+  const whatsappNumber = '918531057157'
   //const whatsappNumber = '919042220439'
   const message = encodeURIComponent('Hi, I would like to order mangoes from APE FARMS.')
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`

@@ -15,7 +15,7 @@ export default function Cart({ isOpen, onClose, items, onUpdateQuantity, onRemov
     message += `\nSubtotal: ₹${subtotal}`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/919940061057?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/918531057157?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   };
 
