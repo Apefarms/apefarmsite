@@ -79,7 +79,7 @@ export default function Register({ isOpen, onClose, onLoginSuccess }) {
 
         <div
           className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat pointer-events-none drop-shadow-2xl"
-          style={{ backgroundImage: 'url("/img/login_mango_popup.png")' }}
+          style={{ backgroundImage: 'url("/img/login_mango_popup.webp")' }}
         />
 
         <div className="relative z-10 w-full mr-8 max-w-[380px] flex flex-col items-center px-4">
