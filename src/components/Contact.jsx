@@ -18,7 +18,7 @@ export default function Contact() {
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-black/5 bg-white p-5">
                 <div className="text-sm font-semibold text-neutral-900">WhatsApp</div>
-                <div className="mt-2 text-sm text-neutral-600">+91 99400 61057</div>
+                <div className="mt-2 text-sm text-neutral-600">+91 85310 57157</div>
               </div>
               <div className="rounded-2xl border border-black/5 bg-white p-5">
                 <div className="text-sm font-semibold text-neutral-900">Email</div>
