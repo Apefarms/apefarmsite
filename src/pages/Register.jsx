@@ -75,38 +75,38 @@ export default function Register({ isOpen, onClose, onLoginSuccess }) {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
-      <div className="relative w-full ml-6 max-w-[700px] aspect-[0.9] flex flex-col items-center justify-center">
+      <div className="relative w-full md:ml-6 max-w-[92vw] sm:max-w-[480px] md:max-w-[700px] aspect-[0.9] flex flex-col items-center justify-center">
 
         <div
-          className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat pointer-events-none drop-shadow-2xl"
+          className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat pointer-events-none drop-shadow-2xl ms-4"
           style={{ backgroundImage: 'url("/img/login_mango_popup.webp")' }}
         />
 
-        <div className="relative z-10 w-full mr-8 max-w-[380px] flex flex-col items-center px-4">
+        <div className="relative z-10 w-full md:mr-8 max-w-[200px] sm:max-w-[260px] md:max-w-[380px] flex flex-col items-center px-2 sm:px-4">
 
-          <div className="mb-0 -mt-16 transform translate-y-[-20%]">
-            <div className="bg-white rounded-full p-0.5 shadow-md border-[3px] border-orange-500/20 overflow-hidden w-20 h-20">
+          <div className="mb-0 -mt-10 sm:-mt-16 transform translate-y-[-20%]">
+            <div className="bg-white rounded-full p-0.5 shadow-md border-[3px] border-orange-500/20 overflow-hidden w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20">
               <img src="/img/logo.webp" alt="Logo" className="w-full h-full object-cover scale-110" />
             </div>
           </div>
 
-          <h2 className="text-[22px] font-bold text-center text-neutral-800 leading-tight mb-6">
+          <h2 className="text-[13px] sm:text-[17px] md:text-[22px] font-bold text-center text-neutral-800 leading-tight mb-2 sm:mb-4 md:mb-6">
             Welcome to APE FARMS<br />
-            <span className="text-lg font-bold">- {isLogin ? 'Login' : 'Sign Up'}</span>
+            <span className="text-[12px] sm:text-sm md:text-lg font-bold">- {isLogin ? 'Login' : 'Sign Up'}</span>
           </h2>
 
-          <form className="w-full space-y-3.5" onSubmit={handleSubmit}>
+          <form className="w-full space-y-2 sm:space-y-3 md:space-y-3.5" onSubmit={handleSubmit}>
 
             {/* Name Field */}
             {!isLogin && (
               <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                <span className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-neutral-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" className="sm:w-[18px] sm:h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
                 </span>
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-full py-1.5 pl-12 pr-4 bg-white border border-neutral-200 rounded-full focus:outline-none focus:ring-2 focus:ring-mango-400 focus:border-transparent text-neutral-800 shadow-sm placeholder:text-neutral-400"
+                  className="w-full text-xs sm:text-sm py-1 sm:py-1.5 pl-8 sm:pl-12 pr-3 sm:pr-4 bg-white border border-neutral-200 rounded-full focus:outline-none focus:ring-2 focus:ring-mango-400 focus:border-transparent text-neutral-800 shadow-sm placeholder:text-neutral-400"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
@@ -116,13 +116,13 @@ export default function Register({ isOpen, onClose, onLoginSuccess }) {
 
             {/* Email Field */}
             <div className="relative">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+              <span className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-neutral-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" className="sm:w-[18px] sm:h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
               </span>
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full py-1.5 pl-12 pr-4 bg-white border border-neutral-200 rounded-full focus:outline-none focus:ring-2 focus:ring-mango-400 focus:border-transparent text-neutral-800 shadow-sm placeholder:text-neutral-400"
+                className="w-full text-xs sm:text-sm py-1 sm:py-1.5 pl-8 sm:pl-12 pr-3 sm:pr-4 bg-white border border-neutral-200 rounded-full focus:outline-none focus:ring-2 focus:ring-mango-400 focus:border-transparent text-neutral-800 shadow-sm placeholder:text-neutral-400"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
@@ -130,13 +130,13 @@ export default function Register({ isOpen, onClose, onLoginSuccess }) {
 
             {/* Password Field */}
             <div className="relative">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+              <span className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-neutral-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" className="sm:w-[18px] sm:h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
               </span>
               <input
                 type="password"
                 placeholder="Password"
-                className="w-full py-1.5 pl-12 pr-4 bg-white border border-neutral-200 rounded-full focus:outline-none focus:ring-2 focus:ring-mango-400 focus:border-transparent text-neutral-800 shadow-sm placeholder:text-neutral-400"
+                className="w-full text-xs sm:text-sm py-1 sm:py-1.5 pl-8 sm:pl-12 pr-3 sm:pr-4 bg-white border border-neutral-200 rounded-full focus:outline-none focus:ring-2 focus:ring-mango-400 focus:border-transparent text-neutral-800 shadow-sm placeholder:text-neutral-400"
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
               />
@@ -145,13 +145,13 @@ export default function Register({ isOpen, onClose, onLoginSuccess }) {
             {/* Confirm Password Field (Only for Sign Up) */}
             {!isLogin && (
               <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                <span className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-neutral-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" className="sm:w-[18px] sm:h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
                 </span>
                 <input
                   type="password"
                   placeholder="Confirm Password"
-                  className="w-full py-1.5 pl-12 pr-4 bg-white border border-neutral-200 rounded-full focus:outline-none focus:ring-2 focus:ring-mango-400 focus:border-transparent text-neutral-800 shadow-sm placeholder:text-neutral-400"
+                  className="w-full text-xs sm:text-sm py-1 sm:py-1.5 pl-8 sm:pl-12 pr-3 sm:pr-4 bg-white border border-neutral-200 rounded-full focus:outline-none focus:ring-2 focus:ring-mango-400 focus:border-transparent text-neutral-800 shadow-sm placeholder:text-neutral-400"
                   value={formData.confirmPassword}
                   onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                 />
@@ -172,14 +172,14 @@ export default function Register({ isOpen, onClose, onLoginSuccess }) {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-1.5 bg-mango-500 hover:bg-mango-600 text-white font-bold rounded-full shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2 mt-2 disabled:opacity-60"
+              className="w-full text-xs sm:text-sm py-1 sm:py-1.5 bg-mango-500 hover:bg-mango-600 text-white font-bold rounded-full shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-1 sm:gap-2 mt-1 sm:mt-2 disabled:opacity-60"
             >
               {loading ? 'Please wait...' : (isLogin ? 'Login' : 'Signup')}
-              <span className="text-xl leading-none">🥭</span>
+              <span className="text-base sm:text-xl leading-none">🥭</span>
             </button>
           </form>
 
-          <div className="mt-4 flex flex-col items-center gap-2">
+          <div className="mt-2 sm:mt-4 flex flex-col items-center gap-2">
             <button
               type="button"
               onClick={() => {
@@ -187,7 +187,7 @@ export default function Register({ isOpen, onClose, onLoginSuccess }) {
                 setMessage('')
                 setFormData({ email: '', password: '', confirmPassword: '', name: '' })
               }}
-              className="text-[13px] font-semibold text-mango-600 hover:text-mango-700 transition-colors underline underline-offset-4"
+              className="text-[10px] sm:text-[13px] font-semibold text-mango-600 hover:text-mango-700 transition-colors underline underline-offset-4"
             >
               {isLogin ? "I don't have account" : "I already have account"}
             </button>
